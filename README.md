@@ -117,7 +117,7 @@ class CpuLogic {
 public:
     CpuLogic();
 
-    void DetermineShot(int &row, int& column);
+    void DetermineShot(int &row, int& column) const;
     void ReportOutcome(int row, int column, Outcome outcome);
 
 private:
