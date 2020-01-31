@@ -35,14 +35,14 @@ enum Outcome { SHOT_MISSED, SHIP_HIT, SHIP_SUNK, GAME_WON, SHOT_HERE_BEFORE };
 //      startRow - row (0-9) of uppermost (if vertical) or leftmost (if horizontal) square it occupies
 //      startColumn - column (0-9) of uppermost (if vertical) or leftmost (if horizontal) square it occupies
 //      hits - number of different squares that ship occupies that have been hit, it's sunk if hits == size
-typedef struct {
+struct Ship {
     string name;
     int size;
     bool isVertical;
     int startRow;
     int startColumn;
     int hits;
-} Ship;
+};
 
 // Describes the state of the grid
 //      ships - the ships placed on teh grid
