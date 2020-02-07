@@ -67,57 +67,63 @@ int main() {
 
         // Figure out what to do
         do {
-            cout << "Enter Q for quit or F for fire a shot: ";
+            cout << "Enter Q for quit, P for print grid, or F for fire a shot: ";
             cin >> command;
-        } while (command != "Q" && command != "F");
+        } while (command != "Q" && command != "P" && command != "F");
 
         // If user chooses to quit
         if (command == "Q") {
             break;
         }
 
-        // Determine location of shot
-        if (mode == "M") {
-            UserDetermineShot(row, column);
+            // Print grid
+        else if (command == "P") {
+            PrintGrid(grid);
         }
+
+            // Fire shots
         else {
-            cpuLogic.DetermineShot(row, column);
+            // Determine location of shot
+            if (mode == "M") {
+                UserDetermineShot(row, column);
+            } else {
+                cpuLogic.DetermineShot(row, column);
+            }
+
+            // Fire the shot
+            success = grid.FireShot(row, column, outcome);
+
+            // Handle error
+            if (!success) {
+                cout << "Failed to fire shot" << endl;
+                continue;
+            }
+
+            // Report outcome to cpuLogic
+            if (mode == "A") {
+                cpuLogic.ReportOutcome(row, column, outcome);
+            }
+
+            // Display outcome and updated grid
+            switch (outcome) {
+                case SHOT_MISSED:
+                    cout << "outcome = SHOT_MISSED" << endl;
+                    break;
+                case SHIP_HIT:
+                    cout << "outcome = SHIP_HIT" << endl;
+                    break;
+                case SHIP_SUNK:
+                    cout << "outcome = SHIP_SUNK" << endl;
+                    break;
+                case SHOT_HERE_BEFORE:
+                    cout << "outcome = SHOT_HERE_BEFORE" << endl;
+                    break;
+                case GAME_WON:
+                    cout << "outcome = GAME_WON" << endl;
+                    break;
+
+            }
         }
-
-        // Fire the shot
-        success = grid.FireShot(row, column, outcome);
-
-        // Handle error
-        if (!success) {
-            cout << "Failed to fire shot" << endl;
-            continue;
-        }
-
-        // Report outcome to cpuLogic
-        if (mode == "A") {
-            cpuLogic.ReportOutcome(row, column, outcome);
-        }
-
-        // Display outcome and updated grid
-        switch (outcome) {
-            case SHOT_MISSED:
-                cout << "outcome = SHOT_MISSED" << endl;
-                break;
-            case SHIP_HIT:
-                cout << "outcome = SHIP_HIT" << endl;
-                break;
-            case SHIP_SUNK:
-                cout << "outcome = SHIP_SUNK" << endl;
-                break;
-            case SHOT_HERE_BEFORE:
-                cout << "outcome = SHOT_HERE_BEFORE" << endl;
-                break;
-            case GAME_WON:
-                cout << "outcome = GAME_WON" << endl;
-                break;
-
-        }
-        PrintGrid(grid);
     }
 }
 

@@ -29,7 +29,7 @@ void PrintGrid(const Grid& grid) {
         cout << ",\tsize = " << ship.size;
         cout << ",  isVertical = " << ship.isVertical;
         cout << ",  startRow = " << ship.startRow;
-        cout << ",  startColumn = " <<  (char)('A'+ship.startColumn);
+        cout << ",  startColumn = " <<  ship.startColumn;
         cout << ",  hits = " << ship.hits << endl;
     }
 
