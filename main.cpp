@@ -76,18 +76,19 @@ int main() {
             break;
         }
 
-            // Print grid
+        // Print grid
         else if (command == "P") {
             PrintGrid(grid);
         }
 
-            // Fire shots
+        // Fire shots
         else {
             // Determine location of shot
             if (mode == "M") {
                 UserDetermineShot(row, column);
             } else {
                 cpuLogic.DetermineShot(row, column);
+                cout << "Firing at (" << row << ", " << column << "), ";
             }
 
             // Fire the shot
