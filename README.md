@@ -161,6 +161,8 @@ Make sure you test your code thoroughly.
 * For starters, make sure that you test all the possible outcomes of manual firing shown in the screen shots.  You should also verify it works correctly with both horizontal and vertical ship orientations and ships longer than two squares.
 * Test algorithmic firing.  Ensure that you do not fire on the same square twice, and that you are using the random number generator correctly.
 
+The test files referenced by the rubric have been included in this repo: twoShips.txt, threeShips.txt, fourShips.txt, and fiveShips.txt.
+
 ## Style
 
 Your program needs to be orderly and readable.  If you are working a development team and don’t write clean looking code, you will be unpopular among your colleagues and may not work on that team very long.  Because of this your program will be graded on style as well as correctness.  Please refer to the style guidelines discussed in class and in reading assignments concerning
