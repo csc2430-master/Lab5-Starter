@@ -146,8 +146,8 @@ Here’s a recommendation set of steps to doing this assignment:
     *	Otherwise you will need to get the ship that sits on the square and increase the ship's count of hits
      *	If there are still parts of the ship that haven’t been hit, mark the square as _HIT_, and return _true_ with the _Outcome_ _SHIP_HIT_
      *	Otherwise, mark all squares the ship occupies as _SUNK_.  
-       * If not all ships have been sunk, return true and report _SHIP_SUNK_
-       * 	Otherwise report _GAME_WON_.
+       * If not all ships have been sunk, report _SHIP_SUNK_ and return true
+       * 	Otherwise report _GAME_WON_ and return true
 
 4.	Stub out the two _CpuLogic_ methods enough so that the program can be compiled, and you can test manual firing.
 
