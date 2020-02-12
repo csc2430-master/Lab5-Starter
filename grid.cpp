@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <assert.h>
-#include "Grid.h"
+#include "grid.h"
 
 // Class constructor
 //  - calls Init to ensure the class

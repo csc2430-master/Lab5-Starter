@@ -9,7 +9,7 @@
 #include <iostream>
 #include "grid.h"
 #include "cpulogic.h"
-#include "helperCode.h"
+#include "helpercode.h"
 
 // Forward Declaration
 void UserDetermineShot(int& row, int& column);

@@ -8,7 +8,7 @@
 #include <iostream>
 #include <sstream>
 #include <assert.h>
-#include "helperCode.h"
+#include "helpercode.h"
 
 // Print the current state of a grid.
 // Parameters:
