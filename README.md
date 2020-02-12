@@ -133,9 +133,9 @@ As described earlier, the user interface calls _DetermineShot_ to find out what 
 
 Here’s a recommendation set of steps to doing this assignment:
 
-1.	Start by putting your name in the file headers for **grid.cpp*, **cpuLogic.h**, and **cpuLogic.cpp** as author or co-author.
+1.	Start by putting your name in the file headers for **grid.cpp**, **cpuLogic.h**, and **cpuLogic.cpp** as author or co-author.
 
-2.	Implement the _Grid_ constructor and the _Grid_ class methods that correspond to the Lab 4 interface functions.  The function header comments have already been placed in the file **grid.cpp** for you.  You can copy in the corresponding Lab 4 implementation under each function header comment and then fix the syntax.  No algorithmic changes are necessary here.  Once you get the hang of it, this should go quickly.  Make sure everything compiles before you go further.
+2.	Implement the _Grid_ constructor and the _Grid_ class methods that correspond to the Lab 4 interface functions.  The function header comments have already been placed in the file **grid.cpp** for you.  You can copy in the corresponding Lab 4 implementation under each function header comment and then fix the syntax.  No algorithmic changes are necessary here.  Once you get the hang of it, this should go quickly.  *Make sure everything compiles before you go further*.
 
 3.	Implement the _FireShot_ method of the _Grid_ class.  This will take more thinking.
 
